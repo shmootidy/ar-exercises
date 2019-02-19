@@ -12,7 +12,11 @@ puts "----------"
 # Your code goes here ...
 puts "Please enter a store name and press enter:"
 @store_name = gets.chomp
-@new_store = Store.create(name: "#{@store_name}")
+
+puts "Please enter a store's annual revenue and press enter:"
+@store_revenue = gets.chomp
+
+@new_store = Store.create(name: "#{@store_name}", annual_revenue: "#{@store_revenue}")
 @new_store.errors.full_messages.each do |message|
   puts message
 end
