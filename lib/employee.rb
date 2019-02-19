@@ -6,6 +6,8 @@ class Employee < ActiveRecord::Base
 
   # before_create :set_password
   after_create :set_password
+  # before_save :set_password
+
 
   private
     def set_password
